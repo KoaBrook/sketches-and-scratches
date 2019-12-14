@@ -1,6 +1,6 @@
 ---
-templateKey: 'about-page'
-path: /who-am-i
+templateKey: about-page
 title: Who Am I?
 image: /img/headshot.png
 ---
+![Jack Owen](/img/headshot.png "Jack Owen")
