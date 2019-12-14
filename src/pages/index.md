@@ -5,17 +5,13 @@ image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
-  title: Why Kaldi
+  title: Welcome!
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    My name is Jack Owen. I'm an aspiring writer of middle-grade and Young Adult fiction.
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  When writing I take inspiration from many, many different places and have learnt many interesting things. I'd like to share some of these things on Sketches & Scratches in the hopes they might inspire you too!<br>
+  For now you can read articles on the art & artists which inspired my first novel Sketch.<br />
+  Later I'll add some stuff on time travel & scientific theory from the research I did on my second book The Day Time Was Lost and also a section on animals & nature.
 intro:
   blurbs:
     - image: /img/coffee.png
