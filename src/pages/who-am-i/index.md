@@ -1,7 +1,9 @@
 ---
-templateKey: about-page
+templateKey: who-am-i-page
+path: /who-am-i
 title: Who Am I?
 image: ../img/headshot.png
+imageCaption: This is a picture of a younger, better me! To say I look exactly the same would be a stretch... but you get the idea!
 ---
 Good question! Who are any of us really?
 

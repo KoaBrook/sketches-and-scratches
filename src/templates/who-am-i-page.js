@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Headshot from '../img/headshot.png'
 
-export const WhoAmIPageTemplate = ({ title, content, contentComponent, image }) => {
+export const WhoAmIPageTemplate = ({ title, content, contentComponent, imageCaption }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -13,17 +13,20 @@ export const WhoAmIPageTemplate = ({ title, content, contentComponent, image }) 
 
       <div className="container">
         <div className="columns">
-          <div className="column is-10 is-offset-1">
+          <div className="column is-8 is-offset-1">
             <div className="section">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
-              <div>
-                <h1>Hello</h1>
-              </div>
-              <Image src={image} alt="Jack Owen" />
               <PageContent className="content" content={content} />
-
+            </div>
+          </div>
+          <div className="column is-4">
+            <div className="section">
+              <img src={Headshot} alt="Jack Owen" />
+              <div>
+              <p>{imageCaption}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -36,8 +39,7 @@ WhoAmIPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-  contentComponent: PropTypes.image,
-
+  imageCaption: PropTypes.string,  
 }
 
 const WhoAmIPage = ({ data }) => {
