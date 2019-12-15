@@ -3,12 +3,14 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Headshot from '../img/headshot.png'
 
 export const WhoAmIPageTemplate = ({ title, content, contentComponent, image }) => {
   const PageContent = contentComponent || Content
 
   return (
     <section className="section section--gradient">
+
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -16,8 +18,12 @@ export const WhoAmIPageTemplate = ({ title, content, contentComponent, image }) 
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
-              {image}
+              <div>
+                <h1>Hello</h1>
+              </div>
+              <Image src={image} alt="Jack Owen" />
               <PageContent className="content" content={content} />
+
             </div>
           </div>
         </div>
@@ -28,9 +34,10 @@ export const WhoAmIPageTemplate = ({ title, content, contentComponent, image }) 
 
 WhoAmIPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  image: PropTypes.image,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  contentComponent: PropTypes.image,
+
 }
 
 const WhoAmIPage = ({ data }) => {
@@ -65,9 +72,10 @@ export const whoAmIPageQuery = graphql`
             fluid(maxWidth: 240, quality: 64) {
               ...GatsbyImageSharpFluid
             }
-          }
-        }
       }
+      
     }
   }
+}
+}
 `

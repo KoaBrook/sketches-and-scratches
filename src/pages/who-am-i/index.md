@@ -1,15 +1,13 @@
 ---
 templateKey: about-page
 title: Who Am I?
-image: /img/headshot.png
+image: ../img/headshot.png
 ---
-![Jack Owen](/img/headshot.png "Jack Owen")
-
 Good question! Who are any of us really?
 
 Well, my name is Jack Owen.
 
-As my name implies I like to consider myself a ‘Jack of All Trades’. I’m an aspiring writer, an actor, a teacher and a friend to anyone who needs it.
+As my name implies I like to consider myself a ‘Jack of All Trades’. I’m a writer, actor, teacher and a friend to anyone who needs it.
 
 I’m English but I don’t live in England. In fact I love to live everywhere and travel at any/every opportunity I can. Wherever I go I discover new people, things and stories.
 
