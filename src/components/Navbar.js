@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Header from '../components/Header'
+import logo from '../img/sketcheslogo.svg';
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -33,18 +35,20 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent bor-bottom"
+        className="navbar is-transparent "
         role="navigation"
         aria-label="main-navigation"
       >
         <div className="container">
           <div className="navbar">
             {/* Hamburger menu */}
+            <a className="navbar-brand" href='#'><img src={logo} align="center" width="250"></img></a>
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
             >
+              
               <span />
               <span />
               <span />

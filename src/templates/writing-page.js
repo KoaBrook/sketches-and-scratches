@@ -3,16 +3,14 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import Headshot from '../img/headshot.png'
 
-export const WhoAmIPageTemplate = ({ title, content, contentComponent, imageCaption }) => {
+export const WritingPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-
       <div className="container">
         <div className="columns">
-          <div className="column is-8 is-offset-1">
+          <div className="column is-10 is-offset-1">
             <div className="section">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
@@ -20,62 +18,44 @@ export const WhoAmIPageTemplate = ({ title, content, contentComponent, imageCapt
               <PageContent className="content" content={content} />
             </div>
           </div>
-          <div className="column is-4">
-            <div className="section">
-              <img src={Headshot} alt="Jack Owen" />
-              <div>
-              <p>{imageCaption}</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
   )
 }
 
-WhoAmIPageTemplate.propTypes = {
+WritingPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-  imageCaption: PropTypes.string,  
 }
 
-const WhoAmIPage = ({ data }) => {
+const WritingPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <WhoAmIPageTemplate
+      <WritingPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
-        image={post.image}
       />
     </Layout>
   )
 }
 
-WhoAmIPage.propTypes = {
+WritingPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default WhoAmIPage
+export default WritingPage
 
-export const whoAmIPageQuery = graphql`
-  query WhoAmIPage($id: String!) {
+export const writingPageQuery = graphql`
+  query WritingPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 240, quality: 64) {
-              ...GatsbyImageSharpFluid
-            }
       }
-      
     }
   }
-}
-}
 `

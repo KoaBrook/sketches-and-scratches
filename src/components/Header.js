@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import logo from '../img/logo.png';
+import logo from '../img/sketcheslogo.svg';
+import Navbar from '../components/Navbar'
 
 class Header extends Component {
     render() {
         return (
-            <div className="p-0 mb-3">
+            <div className="row">
                 <a href="/">
-                <img src={logo} className="p-0" alt="Sketches, Scratches and Scattered Thoughts"></img>
+                <img src={logo} width="250rem" className="p-0 header-img" alt="Sketches, Scratches and Scattered Thoughts"></img>
                 </a>
             </div>
         )

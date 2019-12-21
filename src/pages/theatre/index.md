@@ -3,17 +3,12 @@ templateKey: 'theatre-page'
 path: /theatre
 title: Theatre
 ---
-### Theatre
-My theatre
+### It's almost unbelievable that my interest in theatre began with my mother telling me I should try acting after seeing me pretend to glide through the air as Knuckles the Echidna to my brother's Sonic the Hedgehog. But that's how it happened.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+I was soon after introduced to one of the most important people in my life; Gavin Dutot, who was a youth theatre group leader. It was through acting in his shows, making silly films and basically getting into trouble together that I seriously considered acting as a viable life-choice.
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+Since then I've studied European Theatre Arts at Rose Bruford College of Theatre & Performance, performed in amazing theatres all across the world including in the UK, Spain, Portugal, Poland, Russia, Italy, Romania, Moldova, Slovakia, Japan and probably a few others not on the top of my head and began working as a director and drama teacher.
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+Theatre is an incredibly important art form to me which has taught me ways to express myself creatively and helped me to find my own artistic voice.
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+### Here are some of the most interesting shows and theatre groups I have been a part of.

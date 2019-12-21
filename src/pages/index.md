@@ -10,4 +10,4 @@ For now you can read articles on the art & artists which inspired my first novel
 
 Later I'll add some stuff on time travel & scientific theory from the research I did on my second book The Day Time Was Lost and also a section on animals & nature.
 
-### Be sure to check out the [What I Write](https://jack-test.netlify.com/what-i-write) section to learn more about my books!
+### Be sure to check out the [What I Write](/writing) section to learn more about my books!
