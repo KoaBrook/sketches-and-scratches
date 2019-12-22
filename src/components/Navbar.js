@@ -35,14 +35,15 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent "
+        className="navbar"
         role="navigation"
         aria-label="main-navigation"
       >
+        <a className="navbar-brand" href='#'><img src={logo} align="center" width="250"></img></a>
         <div className="container">
           <div className="navbar">
             {/* Hamburger menu */}
-            <a className="navbar-brand" href='#'><img src={logo} align="center" width="250"></img></a>
+            
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"

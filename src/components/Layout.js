@@ -51,12 +51,12 @@ const TemplateWrapper = ({ children }) => {
 
 
       </Helmet>
-      <div className="header-spacing">
+      <div className="header-spacing bor-bottom">
       <Navbar />
+    </div>
       <div>{children}</div>
       <Footer />
       </div>
-    </div>
   )
 }
 

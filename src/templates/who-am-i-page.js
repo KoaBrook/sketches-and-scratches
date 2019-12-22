@@ -9,7 +9,6 @@ export const WhoAmIPageTemplate = ({ title, content, contentComponent, imageCapt
   const PageContent = contentComponent || Content
 
   return (
-
       <div className="container">
         <div className="columns">
           <div className="column is-8 is-offset-1">
