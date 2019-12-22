@@ -18,6 +18,9 @@ export const WritingPageTemplate = ({ title, content, contentComponent }) => {
               </h2>
               <PageContent className="content" content={content} />
             </div>
+            <div className="section">
+            <WritingRoll />
+            </div>
           </div>
         </div>
       </div>
@@ -40,7 +43,7 @@ const WritingPage = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
       />
-      <WritingRoll />
+      
     </Layout>
   )
 }
