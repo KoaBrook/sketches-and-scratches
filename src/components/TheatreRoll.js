@@ -72,7 +72,7 @@ export default () => (
     query TheatreRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "theatre-entry" } } }
+          filter: { frontmatter: { templateKey: { eq: "theatre-post" } } }
         ) {
           edges {
             node {

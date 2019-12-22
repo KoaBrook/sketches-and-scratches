@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import TheatreRoll from '../components/BlogRoll'
+import TheatreRoll from '../components/TheatreRoll'
 
 export const TheatrePageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
