@@ -1,5 +1,5 @@
 ---
-templateKey: theatre-entry
+templateKey: theatre-post
 title: Clever Pants
 date: 2019-12-22T03:17:11.467Z
 description: Interactive theatre in 110% English!

@@ -1,5 +1,5 @@
 ---
-templateKey: theatre-entry
+templateKey: theatre-post
 title: Princess Mononoke
 date: 2019-12-22T03:16:19.754Z
 description: >-

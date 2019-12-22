@@ -1,5 +1,5 @@
 ---
-templateKey: theatre-entry
+templateKey: theatre-post
 title: The Same but Different
 date: 2019-12-22T03:14:37.847Z
 description: The same as everything you've ever seen... but different.

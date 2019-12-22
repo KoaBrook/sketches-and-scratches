@@ -1,5 +1,5 @@
 ---
-templateKey: theatre-entry
+templateKey: theatre-post
 title: Third Arrangement
 date: 2019-12-22T03:10:01.969Z
 description: >-

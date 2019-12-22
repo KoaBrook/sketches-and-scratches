@@ -4,71 +4,55 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class TheatreRoll extends React.Component {
-  render() {
-    const { data } = this.props
-    const { edges: entries } = data.allMarkdownRemark
+    render() {
+        const { data } = this.props
+        const { edges: entries } = data.allMarkdownRemark
 
-    return (
-      <div className="columns is-multiline">
-        {entries &&
-          entries.map(({ node: entry }) => (
-            <div className="is-parent column is-6" key={entry.id}>
-              <article
-                className={`theatre-list-item tile is-child box notification ${
-                  entry.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {entry.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: entry.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for entry ${entry.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="entry-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={entry.fields.slug}
-                    >
-                      {entry.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {entry.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {entry.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={entry.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
+        return (
+            <div className="rows">
+                {entries &&
+                    entries.map(({ node: entry }) => (
+                        <div className="columns" key={entry.id}>
+                            <div className="column is-6">
+                            <Link className="" to={entry.fields.slug}>
+                                {entry.frontmatter.featuredimage ? (
+                                    <div className="featured-thumbnail surround">
+                                        <PreviewCompatibleImage
+                                            imageInfo={{
+                                                image: entry.frontmatter.featuredimage,
+                                                alt: `featured image thumbnail for entry ${entry.frontmatter.title}`,
+                                            }}
+                                        />
+                                    </div>
+                                ) : null}
+                                </Link>
+                            </div>
+                            <div className="column is-6">
+                                {entry.excerpt}
+                                <br />
+                                <br />
+                                <Link className="" to={entry.fields.slug}>
+                                    Click for more information →
+                                    </Link>
+                            </div>
+                        </div>
+                    ))}
             </div>
-          ))}
-      </div>
-    )
-  }
+        )
+    }
 }
 
 TheatreRoll.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
+    data: PropTypes.shape({
+        allMarkdownRemark: PropTypes.shape({
+            edges: PropTypes.array,
+        }),
     }),
-  }),
 }
 
 export default () => (
-  <StaticQuery
-    query={graphql`
+    <StaticQuery
+        query={graphql`
     query TheatreRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
@@ -99,6 +83,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <TheatreRoll data={data} count={count} />}
-  />
+        render={(data, count) => <TheatreRoll data={data} count={count} />}
+    />
 )

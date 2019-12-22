@@ -11,4 +11,4 @@ Since then I've studied European Theatre Arts at Rose Bruford College of Theatre
 
 Theatre is an incredibly important art form to me which has taught me ways to express myself creatively and helped me to find my own artistic voice.
 
-### Here are some of the most interesting shows and theatre groups I have been a part of.
+### Here are some of the most interesting shows and theatre groups I have been a part of:
