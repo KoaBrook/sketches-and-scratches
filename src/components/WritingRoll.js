@@ -13,10 +13,10 @@ class WritingRoll extends React.Component {
                 {entries &&
                     entries.map(({ node: entry }) => (
                         <div className="columns" key={entry.id}>
-                            <div className="column is-6">
+                            <div className="column is-2">
                             <Link className="" to={entry.fields.slug}>
                                 {entry.frontmatter.featuredimage ? (
-                                    <div className="featured-thumbnail surround">
+                                    <div className="featured-thumbnail">
                                         <PreviewCompatibleImage
                                             imageInfo={{
                                                 image: entry.frontmatter.featuredimage,
@@ -27,7 +27,7 @@ class WritingRoll extends React.Component {
                                 ) : null}
                                 </Link>
                             </div>
-                            <div className="column is-6">
+                            <div className="column is-10">
                                 {entry.excerpt}
                                 <br />
                                 <br />
