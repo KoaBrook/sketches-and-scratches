@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import WritingRoll from '../components/WritingRoll'
 
 export const WritingPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
@@ -39,6 +40,7 @@ const WritingPage = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
       />
+      <WritingRoll />
     </Layout>
   )
 }
