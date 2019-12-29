@@ -6,10 +6,11 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const WritingPostTemplate = ({
+export const FeaturePostTemplate = ({
   content,
   contentComponent,
   description,
+  tags,
   title,
   helmet,
 }) => {
@@ -23,19 +24,27 @@ export const WritingPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <h3>{description}</h3>
-            <br />
-            <article>
+            <p>{description}</p>
             <PostContent content={content} />
-            </article>
-            <br />
+            {tags && tags.length ? (
+              <div style={{ marginTop: `4rem` }}>
+                <h4>Tags</h4>
+                <ul className="taglist">
+                  {tags.map(tag => (
+                    <li key={tag + `tag`}>
+                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
   )
 }
 
-WritingPostTemplate.propTypes = {
+FeaturePostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -43,17 +52,17 @@ WritingPostTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const WritingPost = ({ data }) => {
+const FeaturePost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <WritingPostTemplate
+      <FeaturePostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Writing">
+          <Helmet titleTemplate="%s | Feature">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
@@ -61,22 +70,23 @@ const WritingPost = ({ data }) => {
             />
           </Helmet>
         }
+        tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
     </Layout>
   )
 }
 
-WritingPost.propTypes = {
+FeaturePost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default WritingPost
+export default FeaturePost
 
 export const pageQuery = graphql`
-  query WritingPostByID($id: String!) {
+  query FeaturePostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -84,6 +94,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        tags
       }
     }
   }

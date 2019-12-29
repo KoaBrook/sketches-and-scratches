@@ -10,16 +10,16 @@ export const WhoAmIPageTemplate = ({ title, content, contentComponent, imageCapt
 
   return (
       <div className="container">
+        <div className="section">
         <div className="columns">
-          <div className="column is-8 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+          <div className="column is-offset-1">
+            
+              <h2 className="title has-text-weight-bold is-bold-light">
                 {title}
               </h2>
               <PageContent className="content" content={content} />
             </div>
-          </div>
-          <div className="column is-4">
+          <div className="column is-2">
             <div className="section">
               <img src={Headshot} alt="Jack Owen" />
               <div>
@@ -28,6 +28,8 @@ export const WhoAmIPageTemplate = ({ title, content, contentComponent, imageCapt
             </div>
           </div>
         </div>
+      </div>
+      
       </div>
   )
 }

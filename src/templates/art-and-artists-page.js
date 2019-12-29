@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import WritingRoll from '../components/WritingRoll'
+import ArtArtistsRoll from '../components/ArtArtistsRoll'
 
-export const WritingPageTemplate = ({ title, content, contentComponent }) => {
+export const ArtAndArtistsPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -14,44 +14,44 @@ export const WritingPageTemplate = ({ title, content, contentComponent }) => {
         <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
           {title}
         </h2>
+
         <PageContent className="content" content={content} />
       </div>
       <div className="roll">
-        <WritingRoll />
+        <ArtArtistsRoll />
       </div>
     </div>
   )
 }
 
-WritingPageTemplate.propTypes = {
+ArtAndArtistsPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-const WritingPage = ({ data }) => {
+const ArtAndArtistsPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <WritingPageTemplate
+      <ArtAndArtistsPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
       />
-
     </Layout>
   )
 }
 
-WritingPage.propTypes = {
+ArtAndArtistsPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default WritingPage
+export default ArtAndArtistsPage
 
-export const writingPageQuery = graphql`
-  query WritingPage($id: String!) {
+export const theatrePageQuery = graphql`
+  query ArtAndArtistsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
