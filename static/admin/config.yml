@@ -81,6 +81,13 @@ collections:
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: "Image", name: "image", widget: "image"}
           - {label: "Image Caption", name: "imageCaption", widget: "string"}
+      - file: "src/pages/art-and-artists/index.md"
+        label: "Art & Artists"
+        name: "art-and-artists"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "art-and-artists-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
   - name: "theatreEntries"
     label: "Theatre Entries"
     folder: "src/pages/theatre/entries"
@@ -104,10 +111,3 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
-  - file: "src/pages/art-and-artists/index.md"
-      label: "Art & Artists"
-      name: "art-and-artists"
-      fields:
-        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "art-and-artists-page"}
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Body", name: "body", widget: "markdown"}
