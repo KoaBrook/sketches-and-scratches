@@ -1,5 +1,5 @@
 ---
-templateKey: 'about-page'
+templateKey: 'art-and-artists-page'
 path: /art-and-artists
 title: Art & Artists
 ---
@@ -9,4 +9,4 @@ I decided to write a story about it called Sketch. It was my first novel and I'm
 
 I want to share some of the fascinating things I learnt with you so I've prepared a bunch of articles (with the help of my good friend Sketch) about some of the people and artwork that inspired me and made it into my book.
 
-Look below to find a list of what you can read. And remember, the next time you think a painting’s eyes are following you, they might just be!
+Look below to find a list of what you can read. And remember, the next time you think a painting’s eyes are following you, they might just be:

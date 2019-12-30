@@ -8,6 +8,7 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - brewing
   - chemex
+  - science & time travel
 ---
 ![chemex](/img/chemex.jpg)
 

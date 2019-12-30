@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class ArtArtistsRoll extends React.Component {
+class AnimalsNatureRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -58,7 +58,7 @@ class ArtArtistsRoll extends React.Component {
   }
 }
 
-ArtArtistsRoll.propTypes = {
+AnimalsNatureRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -69,10 +69,10 @@ ArtArtistsRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-    query ArtArtistsRollQuery {
+    query AnimalsNatureRollQuery {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { frontmatter: { tags: { eq: "artists" } } }
+        filter: { frontmatter: { tags: { eq: "animals" } } }
       ) {
         edges {
           node {
@@ -98,6 +98,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <ArtArtistsRoll data={data} count={count} />}
+    render={(data, count) => <AnimalsNatureRoll data={data} count={count} />}
   />
 )
