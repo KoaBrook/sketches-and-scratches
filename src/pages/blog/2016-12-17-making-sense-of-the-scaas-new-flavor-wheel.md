@@ -10,6 +10,7 @@ featuredimage: /img/flavor_wheel.jpg
 tags:
   - flavor
   - tasting
+  - artists
 ---
 ![flavor wheel](/img/flavor_wheel.jpg)
 
