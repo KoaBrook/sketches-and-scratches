@@ -72,7 +72,7 @@ export default () => (
     query ArtArtistsRollQuery {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { frontmatter: { tags: { eq: "artists" } } }
+        filter: { frontmatter: { tags: { eq: "art" } } }
       ) {
         edges {
           node {
