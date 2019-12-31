@@ -4,13 +4,14 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 import './all.sass'
+import '../styles/global.css'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <div className="full">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -54,7 +55,7 @@ const TemplateWrapper = ({ children }) => {
       <div className="header-spacing bor-bottom">
       <Navbar />
     </div>
-      <div>{children}</div>
+      <div className="full">{children}</div>
       <Footer />
       </div>
   )

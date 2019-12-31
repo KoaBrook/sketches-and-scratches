@@ -9,28 +9,25 @@ export const WhoAmIPageTemplate = ({ title, content, contentComponent, imageCapt
   const PageContent = contentComponent || Content
 
   return (
-      <div className="container">
-        <div className="section">
+    <div className="container">
+      <div className="section">
         <div className="columns">
-          <div className="column is-offset-1">
-            
-              <h2 className="title has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
+          <div className="column is-4">
+            <img src={Headshot} alt="Jack Owen" className="headshot"/>
+            <p>{imageCaption}</p>
+          </div>
+          <div>
+              
             </div>
-          <div className="column is-2">
-            <div className="section">
-              <img src={Headshot} alt="Jack Owen" />
-              <div>
-              <p>{imageCaption}</p>
-              </div>
-            </div>
+          <div className="column is-8">
+            <h2 className="title has-text-weight-bold is-bold-light">
+              {title}
+            </h2>
+            <PageContent className="content" content={content} />
           </div>
         </div>
       </div>
-      
-      </div>
+    </div>
   )
 }
 
@@ -38,7 +35,7 @@ WhoAmIPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-  imageCaption: PropTypes.string,  
+  imageCaption: PropTypes.string,
 }
 
 const WhoAmIPage = ({ data }) => {

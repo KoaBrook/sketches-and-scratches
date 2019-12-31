@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Sketches, Scratches and Scattered Thoughts',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Home of Jack Owen: Writer, Actor, Director & big kid',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

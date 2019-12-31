@@ -39,7 +39,11 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <Link className="navbar-brand" to="/"><img src={logo} width="250"></img></Link>
+        <Link className="navbar-brand" to="/"><img
+            src={logo}
+            alt="Kaldi"
+            style={{ width: '14em', height: '10em'}}
+            /></Link>
         <div className="container">
           <div className="navbar">
             {/* Hamburger menu */}

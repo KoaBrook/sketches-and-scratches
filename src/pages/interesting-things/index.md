@@ -1,5 +1,5 @@
 ---
-templateKey: 'about-page'
+templateKey: 'interesting-things-page'
 path: /interesting-things
 title: Interesting things
 ---

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
@@ -16,6 +17,10 @@ export const IndexPageTemplate = ({ title, content, contentComponent }) => {
                 {title}
               </h2>
               <PageContent className="content" content={content} />
+            </div>
+            <h2 className="title is-size-3 has-text-weight-bold is-bold-light">Latest articles:</h2>
+            <div className="roll">
+              <BlogRoll />
             </div>
           </div>
         </div>
