@@ -11,7 +11,7 @@ import { withPrefix } from 'gatsby'
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div className="full">
+    <div>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -52,11 +52,17 @@ const TemplateWrapper = ({ children }) => {
 
 
       </Helmet>
-      <div className="header-spacing bor-bottom">
+      <div className="header-spacing bor-bottom header">
+      <Header />
       <Navbar />
     </div>
-      <div className="full">{children}</div>
-      <Footer />
+      <div className="">
+      <div className="columns">
+          <div className="column is-6 is-offset-3">
+            {children}
+            </div>
+            </div>
+            </div>
       </div>
   )
 }

@@ -34,17 +34,13 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
+      <div className="cen">
       <nav
         className="navbar"
         role="navigation"
         aria-label="main-navigation"
       >
-        <Link className="navbar-brand" to="/"><img
-            src={logo}
-            alt="Kaldi"
-            style={{ width: '14em', height: '10em'}}
-            /></Link>
-        <div className="container">
+        
           <div className="navbar">
             {/* Hamburger menu */}
             
@@ -59,11 +55,12 @@ const Navbar = class extends React.Component {
               <span />
             </div>
           </div>
+          
           <div
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered">
+            <div className="navbar has-text-centered">
               <Link className="navbar-item" to="/who-am-i">
                 Who Am I?
               </Link>
@@ -76,13 +73,14 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/writing">
                 Writing
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
+              <Link className="navbar-item" to="/contact">
+                Contact
               </Link>
             </div>
           </div>
-        </div>
+          
       </nav>
+      </div>
     )
   }
 }

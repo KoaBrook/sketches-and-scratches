@@ -35,6 +35,9 @@ const InterestingThingsPage = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
       />
+
+      
+
     </Layout>
   )
 }

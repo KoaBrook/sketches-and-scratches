@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Headshot from '../img/headshot.png'
+import ContactForm from '../components/ContactForm'
 
 export const WhoAmIPageTemplate = ({ title, content, contentComponent, imageCaption }) => {
   const PageContent = contentComponent || Content
@@ -12,18 +13,24 @@ export const WhoAmIPageTemplate = ({ title, content, contentComponent, imageCapt
     <div className="container">
       <div className="section">
         <div className="columns">
-          <div className="column is-4">
+          <div className="column">
             <img src={Headshot} alt="Jack Owen" className="headshot"/>
             <p>{imageCaption}</p>
           </div>
           <div>
               
             </div>
-          <div className="column is-8">
+          <div className="column">
             <h2 className="title has-text-weight-bold is-bold-light">
               {title}
             </h2>
             <PageContent className="content" content={content} />
+            </div>
+            </div>
+            <br />
+            <div className="columns">
+              <div className="column">
+            <ContactForm />
           </div>
         </div>
       </div>

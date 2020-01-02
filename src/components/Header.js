@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import logo from '../img/sketcheslogo.svg';
-import Navbar from '../components/Navbar'
+import { Link } from 'gatsby'
 
 class Header extends Component {
     render() {
         return (
-            <div className="row">
-                <a href="/">
-                <img src={logo} width="250rem" className="p-0 header-img" alt="Sketches, Scratches and Scattered Thoughts"></img>
-                </a>
+            <div className="row roll">
+                <Link to="/">
+                <img src={logo} className="header-img" alt="Sketches, Scratches and Scattered Thoughts"></img>
+                </Link>
             </div>
         )
     }

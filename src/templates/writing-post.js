@@ -18,11 +18,11 @@ export const WritingPostTemplate = ({
   return (
   <div className="container content">
       {helmet || ''}
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
+      <div className="section">
+        <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+          {title}
+        </h2>
+
             <h3>{description}</h3>
             <br />
             <article>
@@ -31,7 +31,6 @@ export const WritingPostTemplate = ({
             <br />
           </div>
         </div>
-      </div>
   )
 }
 
