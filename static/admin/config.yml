@@ -132,4 +132,5 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "interesting-thing"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", default: "interesting-thing"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
