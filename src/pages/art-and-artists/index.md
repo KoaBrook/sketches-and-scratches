@@ -1,7 +1,7 @@
 ---
-templateKey: 'art-and-artists-page'
-path: /art-and-artists
+templateKey: art-and-artists-page
 title: Art & Artists
+featuredimage: /img/ezgif-2-4848b77f30b2.png
 ---
 ### Did you know that in art galleries across the world the paintings come to life every night? I discovered this when I was visiting the MACBA Museum in Barcelona where some of the artwork was giving me funny looks.
 
