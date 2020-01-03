@@ -1,7 +1,7 @@
 ---
-templateKey: 'science-and-time-travel-page'
-path: /science-and-time-travel
+templateKey: science-and-time-travel-page
 title: Science and Time Travel
+featuredimage: /img/mudskipper.png
 ---
 ### In my book The Day Time Was Lost two friends, Su-hwa and Leo, travel through time to different parts of the world looking for answers.
 
