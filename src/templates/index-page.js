@@ -9,18 +9,18 @@ export const IndexPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-      <div className="container">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-            <h2 className="title is-size-3 has-text-weight-bold is-bold-light">Latest articles:</h2>
-            <div className="roll">
-              <BlogRoll />
-            </div>
-          </div>
+    <div className="container">
+      <div className="section">
+        <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+          {title}
+        </h2>
+        <PageContent className="content" content={content} />
+      </div>
+      
+      <div className="roll">
+        <BlogRoll />
+      </div>
+    </div>
   )
 }
 
