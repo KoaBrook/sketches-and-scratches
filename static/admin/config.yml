@@ -125,3 +125,11 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "InterestingThingsEntries"
+    label: "Interesting Things Entries"
+    folder: "src/pages/interesting-things/entries"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "interesting-thing"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured Image", name: "featuredimage", widget: image}
