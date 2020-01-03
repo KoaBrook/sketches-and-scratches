@@ -10,7 +10,7 @@ class ArtArtistsRoll extends React.Component {
 
     return (
       <div className="section blog-list box">
-        <h2 className="title is-size-3 has-text-weight-bold is-bold-light">Latest articles:</h2>
+        <h2 className="title is-size-3 has-text-weight-bold is-bold-light">Articles:</h2>
           {posts &&
             posts.map(({ node: post }) => (
               <p className="blog-listing">
