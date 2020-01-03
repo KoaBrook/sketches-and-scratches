@@ -1,7 +1,7 @@
 ---
-templateKey: 'animals-and-nature-page'
-path: /animals-and-nature
+templateKey: animals-and-nature-page
 title: Animals and Nature
+featuredimage: /img/mudskipper.png
 ---
 ### Animals are smart, very smart. What would happen if they were even smarter and if there were no humans around to control them?
 
