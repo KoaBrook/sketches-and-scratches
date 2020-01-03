@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import ArtArtistsRoll from '../components/ArtArtistsRoll'
 
-export const ArtAndArtistsPageTemplate = ({ title, content, contentComponent }) => {
+export const ArtAndArtistsPageTemplate = ({ title, featuredImage, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -14,8 +15,23 @@ export const ArtAndArtistsPageTemplate = ({ title, content, contentComponent }) 
         <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
           {title}
         </h2>
-
-        <PageContent className="content" content={content} />
+        <div className="columns">
+          <div className="column is-8">
+            <PageContent className="content" content={content} />
+          </div>
+          <div className="column is-4">
+          {featuredImage ? (
+                    <div className="featured-thumbnail surround">
+                      <PreviewCompatibleImage
+                        imageInfo={{
+                          image: featuredImage,
+                          alt: `featured image thumbnail for entry ${title}`,
+                        }}
+                      />
+                    </div>
+                  ) : null}
+          </div>
+        </div>
       </div>
       <div className="roll">
         <ArtArtistsRoll />
@@ -39,6 +55,7 @@ const ArtAndArtistsPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        featuredImage={post.frontmatter.featuredImage}
       />
     </Layout>
   )
@@ -56,6 +73,13 @@ export const theatrePageQuery = graphql`
       html
       frontmatter {
         title
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 500, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

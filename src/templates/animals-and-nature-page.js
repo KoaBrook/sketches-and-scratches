@@ -4,8 +4,9 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import AnimalsNatureRoll from '../components/AnimalsNatureRoll'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-export const AnimalsAndNaturePageTemplate = ({ title, content, contentComponent }) => {
+export const AnimalsAndNaturePageTemplate = ({ title, content, featuredImage, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -15,7 +16,23 @@ export const AnimalsAndNaturePageTemplate = ({ title, content, contentComponent 
           {title}
         </h2>
 
-        <PageContent className="content" content={content} />
+        <div className="columns">
+          <div className="column is-8">
+            <PageContent className="content" content={content} />
+          </div>
+          <div className="column is-4">
+          {featuredImage ? (
+                    <div className="featured-thumbnail surround">
+                      <PreviewCompatibleImage
+                        imageInfo={{
+                          image: featuredImage,
+                          alt: `featured image thumbnail for entry ${title}`,
+                        }}
+                      />
+                    </div>
+                  ) : null}
+          </div>
+        </div>
       </div>
       <div className="roll">
         <AnimalsNatureRoll />
@@ -39,6 +56,7 @@ const AnimalsAndNaturePage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        featuredImage={post.frontmatter.featuredImage}
       />
     </Layout>
   )

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import InterestingThingsRoll from '../components/InterestingThingsRoll'
+import ArtAndArtistsPic from '../img/sketchhead.png'
+import ScienceAndTimeTravelPic from '../img/science.png'
+import AnimalsAndNaturePic from '../img/animals.png'
 
 export const InterestingThingsPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
@@ -15,9 +17,33 @@ export const InterestingThingsPageTemplate = ({ title, content, contentComponent
           {title}
         </h2>
         <PageContent className="content" content={content} />
-        <InterestingThingsRoll />
+
+        <div className="columns">
+          <div className="column is-6 is-offset-2">
+            <Link className="" to='/art-and-artists'>
+              <img src={ArtAndArtistsPic} />
+            </Link>
+          </div>
         </div>
-    </div>
+
+        <div className="columns">
+            <div className="column is-6 is-offset-2">
+            <Link className="" to='/science-and-time-travel'>
+              <img src={ScienceAndTimeTravelPic} />
+              </Link>
+            </div>
+        </div>
+
+        <div className="columns">
+          <div className="column is-6 is-offset-2">
+            <Link className="" to='/animals-and-nature'>
+              <img src={AnimalsAndNaturePic} />
+            </Link>
+          </div>
+        </div>
+
+      </div>
+    </div >
   )
 }
 
@@ -52,11 +78,11 @@ export default InterestingThingsPage
 
 export const aboutPageQuery = graphql`
   query InterestingThingsPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+          markdownRemark(id: {eq: $id }) {
+          html
       frontmatter {
-        title
+          title
+        }
+        }
       }
-    }
-  }
-`
+    `
