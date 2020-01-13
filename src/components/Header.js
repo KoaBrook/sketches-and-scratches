@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../img/sketcheslogo.svg';
+import logo from '../img/sketchinv.png';
 import { Link } from 'gatsby'
 
 class Header extends Component {
