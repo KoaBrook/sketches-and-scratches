@@ -18,6 +18,25 @@ export const InterestingThingsPageTemplate = ({ title, content, contentComponent
         </h2>
         <PageContent className="content" content={content} />
 
+        <p className="blog-listing">
+        <Link className="" to='/art-and-artists'>
+              Art & Artists
+            </Link>
+            </p>
+
+            <p className="blog-listing">
+        <Link className="" to='/science-and-time-travel'>
+              Science & Time Travel
+            </Link>
+            </p>
+
+            <p className="blog-listing">
+        <Link className="" to='/animals-and-nature'>
+              Animals & Nature
+            </Link>
+            </p>
+
+ {/*}
         <div className="columns">
           <div className="column is-6 is-offset-2">
             <Link className="" to='/art-and-artists'>
@@ -41,6 +60,7 @@ export const InterestingThingsPageTemplate = ({ title, content, contentComponent
             </Link>
           </div>
         </div>
+  */}
 
       </div>
     </div >
